@@ -148,11 +148,7 @@ class CertificadoController extends Controller
 
         $certificado->save();
 
-        //Almacena datos en PDF
-      //  $pdf = new PdfController();
-//        $pdf->generaPDF($certificado);
-     //   return redirect()->action('CertificadoController@pdf', array('id' => $certificado));
-          return redirect()->action('CertificadoController@VistaPrevia', array('id' => $certificado));
+         return redirect()->action('CertificadoController@VistaPrevia', array('id' => $certificado));
     }
 
     public function VistaPrevia($id){
